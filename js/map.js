@@ -26,11 +26,12 @@ function initMap(data) {
     attributionControl: true,
     minZoom: 2,
     maxZoom: 10
-  }).setView([57, 102], 4);
+  }).setView([54, 104], 5);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
+  // OSM estándar (sin API key); el tema oscuro lo aplica el CSS de .map-tiles-dark
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    className: 'map-tiles-dark',
     maxZoom: 19
   }).addTo(map);
 

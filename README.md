@@ -36,7 +36,7 @@ Medios frente a Rospotrebnadzor, más nivel de riesgo (BAJO) con la frase «pest
 | Contactos vigilados | **~189** en observación |
 
 ### Mapa interactivo
-- Tiles oscuros **CartoDB Dark** con Leaflet.js
+- Tiles de **OpenStreetMap** (sin API key) con tema oscuro por CSS, sobre Leaflet.js
 - Un solo marcador: **Irkutsk (52.29, 104.30)**, vista de región de Siberia
 
 ### Cronología del caso
@@ -62,7 +62,7 @@ Feeds vía rss2json: **TASS y Meduza** (RSS directo), **Reuters e Interfax** (co
 | Librería | Versión | Uso |
 |----------|---------|-----|
 | [Leaflet.js](https://leafletjs.com) | 1.9.4 | Mapa interactivo |
-| [CartoDB Dark](https://carto.com/basemaps/) | — | Tiles del mapa |
+| [OpenStreetMap](https://www.openstreetmap.org/copyright) | — | Tiles del mapa (sin API key) |
 | [IBM Plex Mono/Sans](https://fonts.google.com/specimen/IBM+Plex+Mono) | — | Tipografía |
 
 ### Estructura de archivos
