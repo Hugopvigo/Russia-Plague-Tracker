@@ -49,7 +49,7 @@ Cada entrada lleva fecha, texto y **fuente**.
 - Fuentes: OMS, CDC, Rospotrebnadzor, ECDC
 
 ### Noticias
-Feeds vía rss2json de **Reuters, TASS, Interfax y Meduza**, más **Google News** por consulta. Si el caso aislado genera pocas noticias, el feed puede salir casi vacío: es lo esperado, no un fallo.
+Feeds vía rss2json: **TASS y Meduza** (RSS directo), **Reuters e Interfax** (consulta de Bing News acotada a su dominio) y **Bing News** por consulta («Irkutsk plague»). Google News se descartó: su RSS no lo puede descargar rss2json (verificado, «Cannot download this RSS feed»). Si el caso aislado genera pocas noticias, el feed puede salir casi vacío: es lo esperado, no un fallo.
 
 ---
 

@@ -40,10 +40,10 @@
     { "date": "5–6 oct", "dot": "gray", "text": "Reuters y AP informan del despliegue; la <strong>OMS solicita la causa de la muerte</strong>; cuarentena parcial del hospital de Shelejov.", "source": "Reuters" }
   ],
   "newsSources": [
-    { "name": "Reuters", "color": "#ff4444", "url": "https://news.google.com/rss/search?q=site:reuters.com+plague+Russia&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "Reuters", "color": "#ff4444", "url": "https://www.bing.com/news/search?q=site%3Areuters.com+plague+Russia&format=rss" },
     { "name": "TASS", "color": "#4488ff", "url": "https://tass.com/rss/v2.xml" },
-    { "name": "Interfax", "color": "#ffaa00", "url": "https://news.google.com/rss/search?q=site:interfax.com+plague&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "Interfax", "color": "#ffaa00", "url": "https://www.bing.com/news/search?q=Interfax+plague+Irkutsk&format=rss" },
     { "name": "Meduza", "color": "#cc88ff", "url": "https://meduza.io/rss2/all" },
-    { "name": "Google News", "color": "#00cc77", "url": "https://news.google.com/rss/search?q=Irkutsk+plague+OR+Irkutsk+peste&hl=en-US&gl=US&ceid=US:en" }
+    { "name": "Bing News", "color": "#00cc77", "url": "https://www.bing.com/news/search?q=Irkutsk+plague&format=rss" }
   ]
 }
