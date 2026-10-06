@@ -1,4 +1,4 @@
-# Russia Plague Tracker — Irkutsk
+# 🦠 Russia Plague Tracker — Irkutsk
 
 > **Seguimiento sobrio de un caso sin confirmar en Irkutsk (Siberia) · octubre 2026**
 
@@ -71,7 +71,7 @@ Feeds vía rss2json: **TASS y Meduza** (RSS directo), **Reuters e Interfax** (co
 ├── 📄 index.html          ← shell principal
 ├── 📄 admin.html          ← editor web (token de grano fino, solo este repo)
 ├── 📄 data.json           ← fuente única de datos (editable)
-├── 🖼️  logo.webp
+├── 🖼️  logo.jpg
 ├── 📁 css/
 │   └── style.css
 └── 📁 js/
@@ -124,6 +124,19 @@ URL pública: **https://hugopvigo.github.io/Russia-Plague-Tracker/**
 - Agencias citadas en la cronología: Reuters, TASS, Interfax, Meduza
 
 ---
+## 🤖 MugreCorp
+
+> *Inteligencia artificial al servicio de la defensa biológica.*
+
+Dashboard desarrollado por **MugreCorp** como herramienta de seguimiento epidemiológico de código abierto.
+
+---
+
+<div align="center">
+
+☣️ **Mantente informado. Mantente a salvo.** ☣️
+
+---
 
 ## Licencia
 
@@ -134,5 +147,7 @@ URL pública: **https://hugopvigo.github.io/Russia-Plague-Tracker/**
 <div align="center">
 
 **Desarrollado por [Hugo Perez-Vigo](https://hugopvigo.es)** · [@hugopvigo](https://x.com/hugopvigo)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Hugopvigo-181717?style=for-the-badge&logo=github)](https://github.com/Hugopvigo)
 
 </div>
