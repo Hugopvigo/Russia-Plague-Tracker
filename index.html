@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russia Plague Tracker — Irkutsk</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-logo-wrap">
+    <img src="logo.jpg" alt="Russia Plague Tracker" class="header-logo-img">
+  </div>
+  <div class="header-bottom">
+    <span class="header-title">Russia Plague Tracker</span>
+    <div class="header-sep"></div>
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      EN VIVO
+    </div>
+    <div class="last-update" id="last-update">Comprobado: --:--</div>
+  </div>
+</header>
+
+<nav>
+  <button class="nav-btn active" data-view="overview">Resumen</button>
+  <button class="nav-btn" data-view="timeline">Cronología</button>
+  <button class="nav-btn" data-view="info">Información médica</button>
+  <button class="nav-btn" data-view="news">
+    Noticias
+    <span class="nav-badge" id="news-badge" style="display:none">0</span>
+  </button>
+</nav>
+
+<main>
+
+  <!-- ── OVERVIEW ─────────────────────────────────────────────────────────── -->
+  <div class="view active" id="view-overview">
+
+    <div class="risk-banner green" id="risk-banner">
+      <div class="risk-icon" id="risk-icon">BAJO</div>
+      <div class="versus">
+        <div class="vs-row vs-media">
+          <span class="vs-label">Medios</span>
+          <span id="banner-media">Cargando…</span>
+        </div>
+        <div class="vs-row vs-official">
+          <span class="vs-label">Rospotrebnadzor</span>
+          <span id="banner-official"></span>
+        </div>
+        <div class="risk-text" id="banner-alert"></div>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric red">
+        <div class="metric-label">Fallecidos</div>
+        <div class="metric-value" id="m-deaths">—</div>
+        <div class="metric-delta">Caso en investigación</div>
+      </div>
+      <div class="metric amber">
+        <div class="metric-label">Confirmados</div>
+        <div class="metric-value" id="m-confirmed">—</div>
+        <div class="metric-delta">Peste confirmada</div>
+      </div>
+      <div class="metric blue">
+        <div class="metric-label">Sospechosos</div>
+        <div class="metric-value" id="m-suspected">—</div>
+        <div class="metric-delta">En evaluación</div>
+      </div>
+      <div class="metric gray">
+        <div class="metric-label">Contactos vigilados</div>
+        <div class="metric-value" id="m-quarantine">—</div>
+        <div class="metric-delta">En observación médica</div>
+      </div>
+    </div>
+
+    <div class="map-section" style="grid-template-columns:1fr">
+      <div class="map-card">
+        <div class="card-header">
+          <span class="card-title">Distribución geográfica</span>
+          <span class="card-title" style="color:var(--text3)">Clic en marcador para detalles</span>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <div class="bottom-grid" style="grid-template-columns:1fr">
+      <div class="map-card">
+        <div class="card-header">
+          <span class="card-title">Datos clave del caso</span>
+        </div>
+        <div class="card-body">
+          <div class="facts" id="facts-panel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TIMELINE ──────────────────────────────────────────────────────────── -->
+  <div class="view" id="view-timeline">
+    <div class="map-card">
+      <div class="card-header">
+        <span class="card-title">Cronología del caso</span>
+      </div>
+      <div class="card-body">
+        <div class="timeline" id="timeline-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── INFO ──────────────────────────────────────────────────────────────── -->
+  <div class="view" id="view-info">
+    <div class="bottom-grid">
+
+      <div class="map-card">
+        <div class="card-header"><span class="card-title">Formas de la peste</span></div>
+        <div class="card-body">
+          <div class="facts">
+            <div class="fact-row">
+              <span class="fact-label">Bubónica</span>
+              <span class="fact-value">Picadura de pulga; bubones, fiebre alta. Incubación 2–6 días</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Neumónica</span>
+              <span class="fact-value" style="color:var(--amber)">Tos, disnea, esputo sanguinolento. Incubación 1–3 días; la única transmisible entre personas</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Septicémica</span>
+              <span class="fact-value">Infección generalizada en sangre; puede derivar de las anteriores</span>
+            </div>
+          </div>
+          <div class="src">Fuente: OMS — ficha sobre la peste; CDC</div>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <div class="card-header"><span class="card-title">Tratamiento</span></div>
+        <div class="card-body">
+          <div class="facts">
+            <div class="fact-row">
+              <span class="fact-label">Antibióticos</span>
+              <span class="fact-value">Gentamicina, doxiciclina; eficaces si se inician pronto</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Sin tratamiento</span>
+              <span class="fact-value" style="color:var(--red)">La peste neumónica puede ser mortal en 24–48 h tras los síntomas</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Con tratamiento temprano</span>
+              <span class="fact-value" style="color:var(--green)">Supervivencia superior al 90 % en forma bubónica</span>
+            </div>
+          </div>
+          <div class="src">Fuente: OMS; CDC</div>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <div class="card-header"><span class="card-title">Focos naturales en Siberia y Mongolia</span></div>
+        <div class="card-body">
+          <div class="facts">
+            <div class="fact-row">
+              <span class="fact-label">Reservorio</span>
+              <span class="fact-value">Marmotas, ardillas terrestres y sus pulgas</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Zonas</span>
+              <span class="fact-value">Altái (distrito de Kosh-Agach), Tuvá, Buriatia, Zabaikalie y Mongolia</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Prevención</span>
+              <span class="fact-value">Prohibida la caza de marmotas; vacunación en zonas de riesgo</span>
+            </div>
+          </div>
+          <div class="src">Fuente: Rospotrebnadzor; Reuters, 2020</div>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <div class="card-header"><span class="card-title">Actuación y fuentes oficiales</span></div>
+        <div class="card-body">
+          <div class="facts">
+            <div class="fact-row">
+              <span class="fact-label">Si hay síntomas</span>
+              <span class="fact-value">Contacta con tu autoridad sanitaria; no te automediques</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Rospotrebnadzor</span>
+              <span class="fact-value"><a href="https://www.rospotrebnadzor.ru" target="_blank" style="color:var(--blue)">rospotrebnadzor.ru</a></span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">OMS — peste</span>
+              <span class="fact-value"><a href="https://www.who.int/news-room/fact-sheets/detail/plague" target="_blank" style="color:var(--blue)">who.int</a></span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">ECDC — peste</span>
+              <span class="fact-value"><a href="https://www.ecdc.europa.eu/en/plague" target="_blank" style="color:var(--blue)">ecdc.europa.eu</a></span>
+            </div>
+          </div>
+          <div class="src">Caso sin confirmar — tono informativo, sin alarma</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── NEWS ───────────────────────────────────────────────────────────────── -->
+  <div class="view" id="view-news">
+    <div class="map-card">
+      <div class="card-header">
+        <span class="card-title">Últimas noticias</span>
+        <span class="news-count" id="news-count">Cargando…</span>
+      </div>
+      <div style="padding:20px">
+        <div class="news-toolbar">
+          <div class="news-filters" id="news-filters"></div>
+          <button class="news-refresh-btn" id="news-refresh-btn">↺ Actualizar</button>
+        </div>
+        <div class="news-grid" id="news-grid"></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map.js"></script>
+<script src="js/news.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

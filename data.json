@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "lastUpdate": "2026-10-06T09:00:00Z",
+    "alertLevel": "BAJO",
+    "alertColor": "green",
+    "alertText": "Caso en investigación, peste no confirmada: Rospotrebnadzor informa de una neumonía de etiología desconocida y declara estable la situación en Irkutsk y Shelejov. Sin casos secundarios confirmados.",
+    "mediaClaim": "Medios locales (Lyudi Baikala): la empleada habría roto un tubo de ensayo con Y. pestis viva en el instituto anti-peste de Irkutsk.",
+    "officialClaim": "Rospotrebnadzor: sin accidente registrado con microorganismos patógenos; los análisis ampliados no hallaron patógenos vinculados a su trabajo."
+  },
+  "totals": {
+    "deaths": 1,
+    "confirmed": 0,
+    "suspected": 1,
+    "quarantine": 189,
+    "countries": 1
+  },
+  "facts": [
+    { "label": "Agente", "value": "Yersinia pestis (bacteria)", "color": null, "source": "OMS — ficha sobre la peste" },
+    { "label": "Causa oficial", "value": "Neumonía de etiología desconocida; peste no confirmada", "color": "green", "source": "Rospotrebnadzor vía Interfax, 4 oct 2026" },
+    { "label": "Versión de los medios", "value": "Rotura de un tubo con Y. pestis viva en el instituto", "color": "amber", "source": "Lyudi Baikala, cit. por ContagionLive" },
+    { "label": "Incubación", "value": "Neumónica 1–3 días; bubónica 2–6 días (OMS: 1–7)", "color": null, "source": "OMS / CDC" },
+    { "label": "Contactos vigilados", "value": "~189 personas en observación, sin síntomas reseñables", "color": null, "source": "Medios rusos vía Interfax, 5 oct 2026" },
+    { "label": "Tratamiento", "value": "Antibióticos (gentamicina, doxiciclina); eficaces si tempranos", "color": null, "source": "OMS" }
+  ],
+  "countries": [
+    {
+      "name": "Irkutsk", "flag": "🇷🇺", "code": "ru",
+      "lat": 52.29, "lng": 104.30,
+      "deaths": 1, "confirmed": 0, "suspected": 1,
+      "status": "med", "statusText": "Caso sin confirmar",
+      "notes": "Fallece D. Shipilova, 28 años, empleada del instituto anti-peste. Rospotrebnadzor: neumonía de etiología desconocida."
+    }
+  ],
+  "timeline": [
+    { "date": "2 oct", "dot": "red", "text": "Fallece en Irkutsk <strong>Daria Shipilova, 28 años</strong>, empleada del Instituto Anti-Peste de Siberia y Extremo Oriente, con neumonía grave.", "source": "Medios regionales rusos" },
+    { "date": "3 oct", "dot": "amber", "text": "El jefe de Buriatia afirma que murió de peste; el exdirector de Rospotrebnadzor G. Onishchenko dice a TASS que «lo más probable es que no sea peste».", "source": "TASS" },
+    { "date": "4 oct", "dot": "amber", "text": "<strong>Rospotrebnadzor</strong>: situación estable en Irkutsk y Shelejov; causa «neumonía de etiología desconocida»; peste no detectada; sin accidente registrado en el instituto.", "source": "Interfax" },
+    { "date": "4 oct", "dot": "blue", "text": "La directora de Rospotrebnadzor, <strong>Anna Popova</strong>, viaja a Irkutsk y se reúne con el gobernador Ígor Kóbzev; se activan medidas anti-epidémicas.", "source": "Interfax" },
+    { "date": "5 oct", "dot": "amber", "text": "<strong>~189 contactos en observación</strong> con análisis diarios: 2 COVID-19 y 2 rinovirus, ninguna otra infección; sin síntomas reseñables.", "source": "Interfax / TASS" },
+    { "date": "5–6 oct", "dot": "gray", "text": "Reuters y AP informan del despliegue; la <strong>OMS solicita la causa de la muerte</strong>; cuarentena parcial del hospital de Shelejov.", "source": "Reuters" }
+  ],
+  "newsSources": [
+    { "name": "Reuters", "color": "#ff4444", "url": "https://news.google.com/rss/search?q=site:reuters.com+plague+Russia&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "TASS", "color": "#4488ff", "url": "https://tass.com/rss/v2.xml" },
+    { "name": "Interfax", "color": "#ffaa00", "url": "https://news.google.com/rss/search?q=site:interfax.com+plague&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "Meduza", "color": "#cc88ff", "url": "https://meduza.io/rss2/all" },
+    { "name": "Google News", "color": "#00cc77", "url": "https://news.google.com/rss/search?q=Irkutsk+plague+OR+Irkutsk+peste&hl=en-US&gl=US&ceid=US:en" }
+  ]
+}
