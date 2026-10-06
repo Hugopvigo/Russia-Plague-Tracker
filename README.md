@@ -71,7 +71,7 @@ Feeds vía rss2json: **TASS y Meduza** (RSS directo), **Reuters e Interfax** (co
 ├── 📄 index.html          ← shell principal
 ├── 📄 admin.html          ← editor web (token de grano fino, solo este repo)
 ├── 📄 data.json           ← fuente única de datos (editable)
-├── 🖼️  logo.jpg
+├── 🖼️  logo.webp
 ├── 📁 css/
 │   └── style.css
 └── 📁 js/
