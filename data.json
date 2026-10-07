@@ -1,17 +1,17 @@
 {
   "meta": {
-    "lastUpdate": "2026-10-06T09:00:00Z",
+    "lastUpdate": "2026-10-07T09:00:00Z",
     "alertLevel": "BAJO",
     "alertColor": "green",
-    "alertText": "Caso en investigación, peste no confirmada: Rospotrebnadzor informa de una neumonía de etiología desconocida y declara estable la situación en Irkutsk y Shelejov. Sin casos secundarios confirmados.",
+    "alertText": "Caso en investigación, peste no confirmada: Rusia comunica a la OMS (6 oct) que no hay ningún caso de peste registrado en Irkutsk y que el seguimiento de los ~197 contactos finalizó sin patógenos de alto riesgo. Causa de la muerte aún sin aclarar; riesgo bajo.",
     "mediaClaim": "Medios locales (Lyudi Baikala): la empleada habría roto un tubo de ensayo con Y. pestis viva en el instituto anti-peste de Irkutsk.",
-    "officialClaim": "Rospotrebnadzor: sin accidente registrado con microorganismos patógenos; los análisis ampliados no hallaron patógenos vinculados a su trabajo."
+    "officialClaim": "Rospotrebnadzor: sin accidente registrado con microorganismos patógenos; seguimiento de contactos finalizado el 6 oct sin infecciones peligrosas; causa aún sin aclarar."
   },
   "totals": {
     "deaths": 1,
     "confirmed": 0,
     "suspected": 1,
-    "quarantine": 189,
+    "quarantine": 0,
     "countries": 1
   },
   "facts": [
@@ -19,7 +19,7 @@
     { "label": "Causa oficial", "value": "Neumonía de etiología desconocida; peste no confirmada", "color": "green", "source": "Rospotrebnadzor vía Interfax, 4 oct 2026" },
     { "label": "Versión de los medios", "value": "Rotura de un tubo con Y. pestis viva en el instituto", "color": "amber", "source": "Lyudi Baikala, cit. por ContagionLive" },
     { "label": "Incubación", "value": "Neumónica 1–3 días; bubónica 2–6 días (OMS: 1–7)", "color": null, "source": "OMS / CDC" },
-    { "label": "Contactos vigilados", "value": "~189 personas en observación, sin síntomas reseñables", "color": null, "source": "Medios rusos vía Interfax, 5 oct 2026" },
+    { "label": "Contactos vigilados", "value": "~197 identificados; seguimiento finalizado el 6 oct, sin patógenos de alto riesgo", "color": null, "source": "Rospotrebnadzor vía AP; OMS (Tedros), 6 oct 2026" },
     { "label": "Tratamiento", "value": "Antibióticos (gentamicina, doxiciclina); eficaces si tempranos", "color": null, "source": "OMS" }
   ],
   "countries": [
@@ -28,7 +28,7 @@
       "lat": 52.29, "lng": 104.30,
       "deaths": 1, "confirmed": 0, "suspected": 1,
       "status": "med", "statusText": "Caso sin confirmar",
-      "notes": "Fallece D. Shipilova, 28 años, empleada del instituto anti-peste. Rospotrebnadzor: neumonía de etiología desconocida."
+      "notes": "Fallece D. Shipilova, 28 años, empleada del instituto anti-peste. Rospotrebnadzor: neumonía de etiología desconocida. Seguimiento de ~197 contactos finalizado el 6 oct sin casos secundarios (OMS/AP)."
     }
   ],
   "timeline": [
@@ -37,7 +37,10 @@
     { "date": "4 oct", "dot": "amber", "text": "<strong>Rospotrebnadzor</strong>: situación estable en Irkutsk y Shelejov; causa «neumonía de etiología desconocida»; peste no detectada; sin accidente registrado en el instituto.", "source": "Interfax" },
     { "date": "4 oct", "dot": "blue", "text": "La directora de Rospotrebnadzor, <strong>Anna Popova</strong>, viaja a Irkutsk y se reúne con el gobernador Ígor Kóbzev; se activan medidas anti-epidémicas.", "source": "Interfax" },
     { "date": "5 oct", "dot": "amber", "text": "<strong>~189 contactos en observación</strong> con análisis diarios: 2 COVID-19 y 2 rinovirus, ninguna otra infección; sin síntomas reseñables.", "source": "Interfax / TASS" },
-    { "date": "5–6 oct", "dot": "gray", "text": "Reuters y AP informan del despliegue; la <strong>OMS solicita la causa de la muerte</strong>; cuarentena parcial del hospital de Shelejov.", "source": "Reuters" }
+    { "date": "5–6 oct", "dot": "gray", "text": "Reuters y AP informan del despliegue; la <strong>OMS solicita la causa de la muerte</strong>; cuarentena parcial del hospital de Shelejov.", "source": "Reuters" },
+    { "date": "6 oct", "dot": "blue", "text": "Rusia comunica a la <strong>OMS</strong> que no hay ningún caso de peste registrado en Irkutsk —ni en la fallecida ni en contactos—; Tedros: contactos identificados, analizados y observados, sin patógenos de alto riesgo.", "source": "OMS (briefing en Ginebra; Tedros)" },
+    { "date": "6 oct", "dot": "green", "text": "<strong>Seguimiento finalizado</strong>: Rospotrebnadzor da por concluida la observación de todos los contactos sin infecciones peligrosas; en Shelejov ~60 % ya había recibido el alta.", "source": "AP / Reuters" },
+    { "date": "6 oct", "dot": "gray", "text": "EE. UU. (Rubio, Trump) vigila el caso y pide más información a Rusia; Kazajistán, Kirguistán, Tayikistán y Uzbekistán refuerzan controles sanitarios fronterizos. La OMS pide aclarar el patógeno y los reportes —retirados— de un segundo empleado enfermo.", "source": "Reuters / Times of Central Asia / Healthbeat" }
   ],
   "newsSources": [
     { "name": "Reuters", "color": "#ff4444", "url": "https://www.bing.com/news/search?q=site%3Areuters.com+plague+Russia&format=rss" },

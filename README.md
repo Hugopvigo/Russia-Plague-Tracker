@@ -16,7 +16,7 @@ Hay **dos versiones enfrentadas**:
 - **Medios locales** (Lyudi Baikala): la empleada habría roto un tubo de ensayo con *Yersinia pestis* viva.
 - **Rospotrebnadzor**: causa «neumonía de etiología desconocida»; sin accidente registrado con patógenos; peste **no confirmada**; situación estable en Irkutsk y Shelejov.
 
-Unas **189 personas** (contactos de la fallecida) están en observación médica, sin síntomas reseñables. Los análisis de contactos detectaron 2 COVID-19 y 2 rinovirus, ninguna otra infección (Interfax, 5 oct 2026). La OMS ha solicitado la causa de la muerte.
+Unos **197 contactos** fueron identificados y puestos en observación médica, sin síntomas reseñables. Los análisis detectaron 2 COVID-19 y 2 rinovirus, ninguna otra infección (Interfax, 5 oct 2026). El **6 oct** Rospotrebnadzor dio por **finalizado el seguimiento** sin patógenos de alto riesgo (vía AP), y Rusia comunicó a la OMS que no hay ningún caso de peste registrado en Irkutsk. La causa de la muerte sigue sin aclararse y la OMS ha pedido el patógeno causante.
 
 **Tono de este dashboard: sobrio. Cada afirmación lleva su fuente y su estado. La peste no está confirmada.**
 
@@ -33,7 +33,7 @@ Medios frente a Rospotrebnadzor, más nivel de riesgo (BAJO) con la frase «pest
 | Fallecidos | **1** (en investigación) |
 | Confirmados | **0** (peste no confirmada) |
 | Sospechosos | **1** en evaluación |
-| Contactos vigilados | **~189** en observación |
+| Contactos vigilados | **0** activos (197 identificados; seguimiento finalizado el 6 oct) |
 
 ### Mapa interactivo
 - Tiles de **OpenStreetMap** (sin API key) con tema oscuro por CSS, sobre Leaflet.js
@@ -90,7 +90,7 @@ Todos los datos viven en **`data.json`** (o vía `admin.html`):
 // data.json — campos principales
 {
   "meta":      { "alertLevel": "BAJO", ... },  // incluye "peste no confirmada"
-  "totals":    { "deaths": 1, "confirmed": 0, "suspected": 1, "quarantine": 189 },
+  "totals":    { "deaths": 1, "confirmed": 0, "suspected": 1, "quarantine": 0 },
   "facts":     [ { "label": ..., "value": ..., "source": ... } ],
   "countries": [ { "name": "Irkutsk", "lat": 52.29, "lng": 104.30, ... } ],
   "timeline":  [ { "date": ..., "text": ..., "source": ... } ]
