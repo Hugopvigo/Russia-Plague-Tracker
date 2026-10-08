@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastUpdate": "2026-10-07T09:00:00Z",
+    "lastUpdate": "2026-10-08T09:00:00Z",
     "alertLevel": "BAJO",
     "alertColor": "green",
-    "alertText": "Caso en investigación, peste no confirmada: Rusia comunica a la OMS (6 oct) que no hay ningún caso de peste registrado en Irkutsk y que el seguimiento de los ~197 contactos finalizó sin patógenos de alto riesgo. Causa de la muerte aún sin aclarar; riesgo bajo.",
-    "mediaClaim": "Medios locales (Lyudi Baikala): la empleada habría roto un tubo de ensayo con Y. pestis viva en el instituto anti-peste de Irkutsk.",
-    "officialClaim": "Rospotrebnadzor: sin accidente registrado con microorganismos patógenos; seguimiento de contactos finalizado el 6 oct sin infecciones peligrosas; causa aún sin aclarar."
+    "alertText": "Caso en investigación, peste no confirmada: Rospotrebnadzor (7-8 oct) ve «sin riesgo epidémico», con ~5.000 análisis sin patógenos peligrosos y el 90 % de los contactos ya dados de alta; niega que haya un segundo enfermo. La OMS sigue sin conocer el agente causante y pide más información. Causa de la muerte aún sin aclarar; riesgo bajo.",
+    "mediaClaim": "Medios locales (Lyudi Baikala): la empleada habría roto un tubo de ensayo con Y. pestis viva en el instituto anti-peste de Irkutsk; la OMS cita reportes de un segundo empleado con neumonía.",
+    "officialClaim": "Rospotrebnadzor (8 oct): la información sobre un segundo enfermo en Irkutsk «no se corresponde con la realidad»; sin riesgo epidémico; medidas preventivas en fase final; causa aún sin aclarar."
   },
   "totals": {
     "deaths": 1,
@@ -19,7 +19,9 @@
     { "label": "Causa oficial", "value": "Neumonía de etiología desconocida; peste no confirmada", "color": "green", "source": "Rospotrebnadzor vía Interfax, 4 oct 2026" },
     { "label": "Versión de los medios", "value": "Rotura de un tubo con Y. pestis viva en el instituto", "color": "amber", "source": "Lyudi Baikala, cit. por ContagionLive" },
     { "label": "Incubación", "value": "Neumónica 1–3 días; bubónica 2–6 días (OMS: 1–7)", "color": null, "source": "OMS / CDC" },
-    { "label": "Contactos vigilados", "value": "~197 identificados; seguimiento finalizado el 6 oct, sin patógenos de alto riesgo", "color": null, "source": "Rospotrebnadzor vía AP; OMS (Tedros), 6 oct 2026" },
+    { "label": "Contactos vigilados", "value": "~200 identificados; ~5.000 análisis sin patógenos peligrosos; 90 % ya dados de alta; medidas en fase final", "color": null, "source": "Rospotrebnadzor, 7 oct 2026 (vía AFP/Reuters)" },
+    { "label": "Segundo caso", "value": "Reportes de un segundo empleado enfermo, negados por Rospotrebnadzor (8 oct): «no se corresponden con la realidad»", "color": "green", "source": "OMS (Tedros, 7 oct); Rospotrebnadzor/Reuters, 8 oct 2026" },
+    { "label": "Riesgo epidémico", "value": "Sin riesgo epidémico para Irkutsk y región; la OMS dice que le falta información para una evaluación completa", "color": "green", "source": "Rospotrebnadzor, 7 oct; OMS, 7-8 oct 2026" },
     { "label": "Tratamiento", "value": "Antibióticos (gentamicina, doxiciclina); eficaces si tempranos", "color": null, "source": "OMS" }
   ],
   "countries": [
@@ -28,7 +30,7 @@
       "lat": 52.29, "lng": 104.30,
       "deaths": 1, "confirmed": 0, "suspected": 1,
       "status": "med", "statusText": "Caso sin confirmar",
-      "notes": "Fallece D. Shipilova, 28 años, empleada del instituto anti-peste. Rospotrebnadzor: neumonía de etiología desconocida. Seguimiento de ~197 contactos finalizado el 6 oct sin casos secundarios (OMS/AP)."
+      "notes": "Fallece D. Shipilova, 28 años, empleada del instituto anti-peste. Rospotrebnadzor (7-8 oct): neumonía de etiología desconocida, sin riesgo epidémico, ~5.000 análisis negativos y segundo caso negado. La OMS aún no conoce el agente causante."
     }
   ],
   "timeline": [
@@ -40,7 +42,10 @@
     { "date": "5–6 oct", "dot": "gray", "text": "Reuters y AP informan del despliegue; la <strong>OMS solicita la causa de la muerte</strong>; cuarentena parcial del hospital de Shelejov.", "source": "Reuters" },
     { "date": "6 oct", "dot": "blue", "text": "Rusia comunica a la <strong>OMS</strong> que no hay ningún caso de peste registrado en Irkutsk —ni en la fallecida ni en contactos—; Tedros: contactos identificados, analizados y observados, sin patógenos de alto riesgo.", "source": "OMS (briefing en Ginebra; Tedros)" },
     { "date": "6 oct", "dot": "green", "text": "<strong>Seguimiento finalizado</strong>: Rospotrebnadzor da por concluida la observación de todos los contactos sin infecciones peligrosas; en Shelejov ~60 % ya había recibido el alta.", "source": "AP / Reuters" },
-    { "date": "6 oct", "dot": "gray", "text": "EE. UU. (Rubio, Trump) vigila el caso y pide más información a Rusia; Kazajistán, Kirguistán, Tayikistán y Uzbekistán refuerzan controles sanitarios fronterizos. La OMS pide aclarar el patógeno y los reportes —retirados— de un segundo empleado enfermo.", "source": "Reuters / Times of Central Asia / Healthbeat" }
+    { "date": "6 oct", "dot": "gray", "text": "EE. UU. (Rubio, Trump) vigila el caso y pide más información a Rusia; Kazajistán, Kirguistán, Tayikistán y Uzbekistán refuerzan controles sanitarios fronterizos. La OMS pide aclarar el patógeno y los reportes —retirados— de un segundo empleado enfermo.", "source": "Reuters / Times of Central Asia / Healthbeat" },
+    { "date": "7 oct", "dot": "blue", "text": "La <strong>OMS</strong> (M. Van Kerkhove) dice que desconoce el agente causante y pide a Rusia información puntual y respuestas; Tedros cita reportes de un segundo empleado con neumonía. <strong>Rospotrebnadzor</strong>: situación estable, «sin riesgos epidémicos», ~5.000 análisis sin patógenos peligrosos y 90 % de contactos dados de alta; medidas en fase final.", "source": "OMS / AFP (vía AP, MedicalXpress)" },
+    { "date": "7 oct", "dot": "gray", "text": "El <strong>Kremlin</strong> (Peskov) dice que la gran mayoría de lo publicado por los medios «es información falsa» y remite a Rospotrebnadzor; <strong>Trump</strong> espera que Rusia comparta más y descarta la hipótesis de arma biológica.", "source": "Reuters / AP" },
+    { "date": "8 oct", "dot": "green", "text": "<strong>Rospotrebnadzor niega un segundo contagio</strong>: la información sobre una segunda persona enferma tras contactar con la trabajadora «no se corresponde con la realidad».", "source": "Rospotrebnadzor vía Reuters" }
   ],
   "newsSources": [
     { "name": "Reuters", "color": "#ff4444", "url": "https://www.bing.com/news/search?q=site%3Areuters.com+plague+Russia&format=rss" },
